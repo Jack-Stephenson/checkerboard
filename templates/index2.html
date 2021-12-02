@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<h1>Checkerboard:</h1>
+<div style="grid-template-columns: repeat({{ rows }}, 1fr);" class="container">
+{% for column in range(0, columns): %}
+    {% if column%2==0: %}
+        {% for row in range(0, rows): %}
+            {% if row%2==0: %}
+                <div style="background-color: {{ colorOne }};" class="box-black"></div>
+            {% else: %}
+                <div style="background-color: {{ colorTwo }};" class="box-red"></div>
+            {% endif %}
+        {% endfor %}
+    {% else: %}
+        {% for row in range(0, rows): %}
+            {% if row%2==0: %}
+                <div style="background-color: {{ colorTwo }};" class="box-red"></div>
+            {% else: %}
+                <div style="background-color: {{ colorOne }};" class="box-black"></div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+</div>

@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+.container {
+    display: grid;
+    margin: 0 20%;
+}
+.box-black {
+    padding-top: 100%;
+    width: 100%;
+    background-color: black;
+}
+.box-red {
+    padding-top: 100%;
+    width: 100%;
+    background-color: red;
+}
